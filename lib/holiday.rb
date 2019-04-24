@@ -72,11 +72,11 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_hash.each do |season, holidays|
     holidays.each do |holiday, items|
       #binding.pry
-    if items.include?("BBQ")
-      holiday
+      if items.include?("BBQ")
+        holiday
+      end
     end
-    end
-  end
+  end holiday.flatten.compact
 end
 
 
