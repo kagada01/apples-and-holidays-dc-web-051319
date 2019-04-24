@@ -75,7 +75,6 @@ def all_holidays_with_bbq(holiday_hash)
       puts items
     end
     end
-    storage
   end
 end
 
