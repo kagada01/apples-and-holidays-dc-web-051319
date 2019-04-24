@@ -74,9 +74,9 @@ def all_holidays_with_bbq(holiday_hash)
       if items.include?("BBQ") == true
         storage.push(items)
         #binding.pry
-        storage
       else
       end
+       storage
     end
   end
 end
