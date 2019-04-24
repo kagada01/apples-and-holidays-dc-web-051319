@@ -69,14 +69,14 @@ end
 def all_holidays_with_bbq(holiday_hash)
   storage = []
   
-  holiday_hash.each do |season, holidays|
-    holidays.each do |holiday, items|
+  holiday_hash.collect do |season, holidays|
+    holidays.collect do |holiday, items|
       #binding.pry
       if items.include?("BBQ")
         holiday
       end
     end
-  end.flatten.compact
+  end
 end
 
 
