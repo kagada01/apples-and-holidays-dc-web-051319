@@ -71,7 +71,7 @@ def all_holidays_with_bbq(holiday_hash)
     holiday.each do |holiday, items|
       if items.include?("BBQ")
         puts items
-      
+      else
     #binding.pry
       end
     end
