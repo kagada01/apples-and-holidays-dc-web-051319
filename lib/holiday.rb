@@ -73,8 +73,9 @@ def all_holidays_with_bbq(holiday_hash)
     holiday.each do |holiday, items|
       if items.include?("BBQ") == true
         storage.push(items)
+        
       else
-    #binding.pry
+    
       end
     end
   end
