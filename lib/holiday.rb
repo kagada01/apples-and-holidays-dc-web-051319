@@ -71,13 +71,13 @@ def all_holidays_with_bbq(holiday_hash)
   
   holiday_hash.collect do |season, holidays|
     holidays.collect do |holiday, items|
-      ##enters 
+      ##enters second level of array to get access to the items, which only evaluate to true if BBQ is one of the items in Value part of the Key/Value pair
      
-      if items.include?("BBQ")
+      if items.include?("BBQ") ##checks to see if items includes "BBQ" and then puts the holiday into an array
         holiday
       end
     end
-  end.flatten.compact
+  end.flatten.compact ##this takes the final array, which is filled with nil values for KVPs that didn't contain "BBQ", and eliminates all of the nil values (#compact), as well as consolidates the entire group of elements into a SINGLE array from a multi-dimensional array (flatten)
 end
 
 
