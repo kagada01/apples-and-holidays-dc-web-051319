@@ -59,7 +59,7 @@ def all_supplies_in_holidays(holiday_hash)
       
       items = items.join(", ") ##creates a variable which turns all items in arrays to comma separated values 
       
-      holidays = holiday.to_s.capitalize!.split("_").map {|i| i.capitalize}.join(" ") << ":" ##creates a varaible which turns the holiday from a symbol into a string, capitalizes it permanently. For any edge-case holidays with 2+ words (New Years), this variable will split that string into two different strings in 
+      holidays = holiday.to_s.capitalize!.split("_").map {|i| i.capitalize}.join(" ") + ":" ##creates a varaible which turns the holiday from a symbol into a string, capitalizes it permanently. For any edge-case holidays with 2+ words (New Years), this variable will split any string into two different strings if the words are separated by an "_", then put them back into the array as capitalized, inidividual strings. Finally the elements from holiday are put into a single string. 
       
      puts "  " + holidays + " " + items
     end
