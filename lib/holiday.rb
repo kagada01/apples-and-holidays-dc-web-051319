@@ -55,12 +55,12 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holiday|
     puts season.to_s.capitalize! + ":"
     
-    holiday.each do |holiday, items|
+    holiday.each do |holiday, items| ##enters bottom level of hash, bringing in holiday and respective array(s) of items for each holiday and sets the following variables for each key/value pair that comes through 
       
-      items = items.join(", ")
+      items = items.join(", ") ##creates a variable which turns all items in arrays to comma separated values 
       
-      holidays = holiday.to_s.capitalize!.split("_").map {|i| i.capitalize}.join(" ") << ":"
-     
+      holidays = holiday.to_s.capitalize!.split("_").map {|i| i.capitalize}.join(" ") << ":" ##creates a varaible which turns the holiday from a symbol into a string, capitalizes it permanently. For any edge-case holidays with 2+ words (New Years), this variable will split that string into two different strings in 
+      
      puts "  " + holidays + " " + items
     end
   end 
